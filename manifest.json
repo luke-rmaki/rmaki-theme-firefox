@@ -1,22 +1,22 @@
 {
   "manifest_version": 2,
-  "version": "2.0",
+  "version": "2.1",
   "name": "Rmaki",
   "theme": {
     "images": {},
     "properties": {},
     "colors": {
-      "toolbar": "rgb(42, 42, 60)",
+      "toolbar": "rgb(31, 31, 36)",
       "toolbar_text": "rgb(218, 231, 246)",
-      "frame": "rgb(31, 31, 36)",
+      "frame": "rgb(42, 42, 60)",
       "tab_background_text": "rgb(118, 107, 188)",
       "toolbar_field": "rgb(50, 50, 57)",
       "toolbar_field_text": "rgb(218, 231, 246)",
-      "tab_line": "rgb(94, 87, 156)",
+      "tab_line": "rgb(135, 232, 206)",
       "popup": "rgb(50, 50, 57)",
       "popup_text": "rgb(218, 231, 246)",
       "button_background_active": "rgb(94, 87, 156)",
-      "button_background_hover": "rgb(118, 107, 188)",
+      "button_background_hover": "rgb(94, 87, 156)",
       "icons_attention": "rgb(218, 231, 246)",
       "icons": "rgb(118, 107, 188)",
       "ntp_background": "rgb(31, 31, 36)",
@@ -33,15 +33,15 @@
       "tab_text": "rgb(135, 232, 206)",
       "toolbar_bottom_separator": "rgb(94, 87, 156)",
       "toolbar_field_border_focus": "rgb(218, 231, 246)",
-      "toolbar_field_border": "rgb(94, 87, 156)",
+      "toolbar_field_border": "rgb(42, 42, 60)",
       "toolbar_field_focus": "rgb(42, 42, 60)",
-      "toolbar_field_highlight_text": "rgb(218, 231, 246)",
-      "toolbar_field_highlight": "rgb(42, 42, 60)",
+      "toolbar_field_highlight_text": "rgb(31, 31, 36)",
+      "toolbar_field_highlight": "rgb(135, 232, 206)",
       "toolbar_field_separator": "rgb(218, 231, 246)",
       "toolbar_field_text_focus": "rgb(218, 231, 246)",
-      "toolbar_top_separator": "rgb(118, 107, 188)",
-      "toolbar_vertical_separator": "rgb(218, 231, 246)",
-      "tab_loading": "rgb(94, 87, 156)"
+      "toolbar_top_separator": "rgb(42, 42, 60)",
+      "toolbar_vertical_separator": "rgb(94, 87, 156)",
+      "tab_loading": "rgb(135, 232, 206)"
     }
   }
 }

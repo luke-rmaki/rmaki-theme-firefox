@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "version": "2.1",
+  "version": "2.2",
   "name": "Rmaki",
   "theme": {
     "images": {},
@@ -22,7 +22,7 @@
       "ntp_background": "rgb(31, 31, 36)",
       "ntp_text": "rgb(218, 231, 246)",
       "popup_border": "rgb(94, 87, 156)",
-      "popup_highlight_text": "rgb(94, 87, 156)",
+      "popup_highlight_text": "rgb(218, 231, 246)",
       "popup_highlight": "rgb(94, 87, 156)",
       "sidebar_border": "rgb(118, 107, 188)",
       "sidebar_highlight_text": "rgb(218, 231, 246)",

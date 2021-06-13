@@ -35,3 +35,4 @@ export function generateColors() {
   return colors
 }
 
+console.log(generateColors())

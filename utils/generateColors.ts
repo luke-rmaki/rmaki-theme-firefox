@@ -1,5 +1,5 @@
-import { calculateVariantLightness } from "./calculateVariantLightness.ts";
-import { Hues, Lightness, Saturation } from "./Colors.ts";
+import { Hues, Lightness, Saturation, variants } from "./Colors.ts";
+import { generateVariantCSS } from "./generateVariantCSS.ts";
 import { convert } from "./colorConversion/convert.ts";
 
 export function generateColors() {
@@ -8,48 +8,30 @@ export function generateColors() {
   const accent = convert(Hues.Accent, Saturation.Accent, Lightness.Accent);
   const white = convert(Hues.White, Saturation.White, Lightness.White);
 
-  const purpleLightOne = convert(
-    Hues.Purple,
-    Saturation.Purple,
-    calculateVariantLightness(Lightness.Purple, "light", 1),
-  );
-  const purpleLightTwo = convert(
-    Hues.Purple,
-    Saturation.Purple,
-    calculateVariantLightness(Lightness.Purple, "light", 2),
-  );
-  const purpleDarkOne = convert(
-    Hues.Purple,
-    Saturation.Purple,
-    calculateVariantLightness(Lightness.Purple, "dark", 1),
-  );
-  const purpleDarkTwo = convert(
-    Hues.Purple,
-    Saturation.Purple,
-    calculateVariantLightness(Lightness.Purple, "dark", 2),
-  );
+  const variantsRaw = generateVariantCSS();
 
-  const blackLightOne = convert(
-    Hues.Black,
-    Saturation.Black,
-    calculateVariantLightness(Lightness.Black, "light", 1),
-  );
-  const blackLightTwo = convert(
-    Hues.Black,
-    Saturation.Black,
-    calculateVariantLightness(Lightness.Black, "light", 2),
-  );
+  const variants = variantsRaw.map((variant) => {
+    const name = Object.keys(variant)[0];
+    const [h, s, l] = variant[name];
+    return { [name]: convert(h, s, l) };
+  });
 
-  return {
+  type Colors = {
+    [key: string]: string;
+  };
+
+  const colors: Colors = {
     purple,
     black,
     accent,
     white,
-    purpleLightOne,
-    purpleLightTwo,
-    purpleDarkOne,
-    purpleDarkTwo,
-    blackLightOne,
-    blackLightTwo,
   };
+
+  variants.forEach((variant) => {
+    const name = Object.keys(variant)[0];
+    colors[name] = variant[name];
+  });
+
+  return colors
 }
+
